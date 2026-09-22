@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Fair Invitation 📖✨</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+  <div class="container">
+    <!-- Page 1-->
+
+    <div id="page1" class="card active">
+      <div class="icon">📚✨</div>
+      <h1>Hey...</h1>
+      <p class="subtitle">Will you go to the Book Fair with me?</p>
+      
+      <div class="button-group">
+        <button id="yesBtn" onclick="nextPage(1, 2)">YES ❤️</button>
+        <button id="noBtn">No 😢</button>
+      </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div id="page2" class="card">
+      <div class="icon">🥹🎉</div>
+      <h1>Yay! You said YES!</h1>
+      <p class="subtitle">Plzzz Choose a date and time:</p>
+
+      <div class="input-group">
+        <label for="dateInput">📅 Pick a Date</label>
+        <input type="date" id="dateInput" />
+      </div>
+
+      <div class="input-group">
+        <label for="timeInput">⏰ Pick a Time</label>
+        <input type="time" id="timeInput" />
+      </div>
+
+      <button class="confirm-btn" onclick="submitDateTime()">Confirm Details 💌</button>
+    </div>
+
+    <!-- Page 3 -->
+    <div id="page3" class="card">
+      <div class="icon">💖📖</div>
+      <h1>Thank youuuu!</h1>
+      <p class="subtitle">Can't wait to explore all the books together.</p>
+
+      <div class="summary-box">
+        <p><strong>📅 Date:</strong> <span id="displayDate">-</span></p>
+        <p><strong>⏰ Time:</strong> <span id="displayTime">-</span></p>
+      </div>
+
+      <div class="heart-pulse">❤️</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
